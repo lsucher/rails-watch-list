@@ -1,7 +1,11 @@
-<h1>Movie Lists</h1>
+<div class="jumbotron" style="background-image: url(<%= image_path('movie_banner') %>)">
+    <h1 class="display-4">Movie Lists</h1>
+    <p class="lead">Add any kind of movie.</p>
+</div>
 
-<ul><% @lists.each do |list| %>
+
+<ul class="card-category"><% @lists.each do |list| %>
   <li><%= link_to list.name, list_path(list)%></li>
 <% end %></ul>
 
-<%= link_to 'Create a new ', new_list_path %>
+<p class="button-38"><%= link_to 'Create a new list', new_list_path %></p>
